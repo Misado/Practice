@@ -1,0 +1,107 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS reset END */
+
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+img{
+	max-width: 100%;
+	height: auto ;
+}
+
+/* RWD reset END */
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.item{
+    flex: 1;
+}
+
+.header{
+    width: 200px;
+}
+
+.content{
+    background-color: blanchedalmond;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* 表示內元件要垂直排列 */
+    align-items: flex-end; /* 交錯軸的排列方式要flex-end，也就是靠右 */
+}
+
+.content p{
+    margin: 20px auto;
+}
+
+.content a{
+    display: block;
+    padding: 5px;
+    background-color: blue;
+    color: #fff;
+    text-decoration: none;
+}
+
+.content a:hover{
+    background-color: red;
+}
+
+.footer{
+    background-color: pink;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* 主要軸線對齊方式為置中 */
+    align-items: center; /* 交錯軸線的對齊方式為置中 */
+}

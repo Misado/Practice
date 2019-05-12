@@ -1,0 +1,266 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS reset END */
+
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+img{
+	max-width: 100%;
+	height: auto ;
+}
+
+/* RWD reset END */
+
+body{
+    font-family: 微軟正黑體;
+    font-weight: bold;
+}
+
+.wrap{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.fanpage{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+    background-color: #f6f6f6;
+    a{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        padding: 10px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    span{
+        margin-left: 5px;
+    }
+    img{
+        width: 14px;
+    }
+}
+
+@media (max-width: 767px){
+    .fanpage{
+        order: 3;
+        justify-content: center;
+        margin-top: 10px;
+        a{
+            font-size: 16px;
+        }
+    }
+
+}
+
+.facebook{
+    span{
+        color: #4460a0;
+    }
+}
+
+.twitter{
+    span{
+        color: #00aaec;
+    }
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 1px 1px 5px gray;
+}
+
+@media (max-width: 767px){
+    .header{
+        order: 1;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.logo h1 a{
+	/* for SearchEngine */
+	background-image: url("../img/logo_green.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 171px;
+	height: 36px;
+	display: block;
+	text-indent: 101%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    a{
+        padding: 20px;
+        text-decoration: none;
+        color: #00cc99;
+        &:hover{
+            border-bottom: 5px solid #00cc99;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .navbar{
+        width: 70%;
+        margin: 10px 15%;
+        flex-wrap: wrap;
+        li{
+            width: 40%;
+            margin: 0 5%;
+            height: 70px;
+
+            display: flex;
+            justify-content: center;
+        }
+        a{
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+
+            font-size: 24px;
+            white-space: nowrap;
+        }
+    }
+}
+
+@media (max-width: 413px){
+    .navbar{
+        li{
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+@media (max-width: 767px){
+    .content{
+        order: 2;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+.item{
+    width: 31.33333%;
+    margin: 0 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 1px 1px 5px gray;
+    h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    p{
+        line-height: 2em;
+        text-align: justify;
+    }
+    &:hover{
+        box-shadow: 3px 3px 5px orange;
+    }
+}
+
+@media (max-width: 767px){
+    .item{
+        width: 90%;
+        margin: 0 5%;
+        padding: 5%;
+        h2{
+            font-size: 24px;
+        }
+        p{
+            font-size: 18px;
+            font-weight: normal;
+        }
+    }
+}
+
+.feature{
+    align-self: flex-start;
+    li{
+        list-style-type: disc;
+        list-style-position: inside;
+        margin: 1em 0;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 767px){
+    .feature{
+        li{
+            font-size: 18px;
+            font-weight: normal;
+        }
+    }
+}
