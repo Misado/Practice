@@ -68,22 +68,21 @@ body{
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* 內元件上下排列 */
 }
 
 .fanpage{
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-end;
+	justify-content: flex-end; /* 內元件置右排列 */
     background-color: #f6f6f6;
     a{
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: center; /* 內元件垂直置中 */
 
         padding: 10px;
         text-decoration: none;
-        font-size: 14px;
     }
     span{
         margin-left: 5px;
@@ -95,12 +94,9 @@ body{
 
 @media (max-width: 767px){
     .fanpage{
-        order: 3;
-        justify-content: center;
+        order: 3; /* 變767px時，fanpage要放在最下面 */
+        justify-content: center; /* 變767px時，內元件水平置中排列 */
         margin-top: 10px;
-        a{
-            font-size: 16px;
-        }
     }
 
 }
@@ -120,22 +116,22 @@ body{
 .header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; /* 內元件要置最左最右 */
     padding: 20px;
     box-shadow: 1px 1px 5px gray;
 }
 
 @media (max-width: 767px){
     .header{
-        order: 1;
+        order: 1; /* 變767px時，header要放在最上面 */
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* 內元件要水平置中 */
     }
 }
 
 .logo h1 a{
 	/* for SearchEngine */
-	background-image: url("../img/logo_green.png");
+	background-image: url("https://misado.github.io/Practice/Flex/hw0512_hw4/img/logo_green.png");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	width: 171px;
@@ -149,11 +145,12 @@ body{
 .navbar{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center; /* 內元件要垂直置中 */
     a{
         padding: 20px;
         text-decoration: none;
         color: #00cc99;
+        font-size: 18px;
         &:hover{
             border-bottom: 5px solid #00cc99;
         }
@@ -171,13 +168,13 @@ body{
             height: 70px;
 
             display: flex;
-            justify-content: center;
+            justify-content: center;  /* 變767px時，內元件要水平置中 */
         }
         a{
             width: 100%;
 
             display: flex;
-            justify-content: center;
+            justify-content: center; /* 變767px時，內元件(文字)要水平置中 */
 
             font-size: 24px;
             white-space: nowrap;
@@ -197,15 +194,13 @@ body{
 .content{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     margin-top: 20px;
 }
 
 @media (max-width: 767px){
     .content{
-        order: 2;
-        flex-direction: column;
-        justify-content: center;
+        order: 2; /* content要放在header的下面 */
+        flex-direction: column; /* 變767px時，內元件要變成垂直排列 */
     }
 }
 
@@ -214,8 +209,8 @@ body{
     width: 31.33333%;
     margin: 0 1%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* 內元件上下排列 */
+    align-items: center; /* 內元件水平置中排列 */
     padding: 20px;
     box-shadow: 1px 1px 5px gray;
     h2{
@@ -246,8 +241,9 @@ body{
     }
 }
 
+/* jQuery 區塊因為有ul li，要特別處理 */
 .feature{
-    align-self: flex-start;
+    align-self: flex-start; /* ul裡的li要置左排列 */
     li{
         list-style-type: disc;
         list-style-position: inside;
