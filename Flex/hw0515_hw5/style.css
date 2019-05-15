@@ -148,3 +148,9 @@ img{
     width: 31.33333%;
     margin: 0 1%;
 }
+
+.clearfix:after{
+    content:'';
+    display:table;
+    clear:both;
+}
