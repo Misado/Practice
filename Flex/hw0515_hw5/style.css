@@ -109,7 +109,8 @@ img{
 
 .content{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -148,6 +149,7 @@ img{
     width: 31.33333%;
     margin: 0 1%;
 }
+
 
 .clearfix:after{
     content:'';
